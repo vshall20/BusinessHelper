@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtWeight;
 @property (weak, nonatomic) IBOutlet UITextField *txtMakingCharge;
 @property (weak, nonatomic) IBOutlet UITextField *txtTax;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *makingChargeFactor;
 
 - (IBAction)calculateCost:(id)sender;
 - (IBAction)refreshUserDefaults:(id)sender;

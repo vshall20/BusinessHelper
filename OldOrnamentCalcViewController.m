@@ -1,13 +1,12 @@
 //
-//  CustomCalcViewController.m
+//  OldOrnamentCalcViewController.m
 //  BusinessHelper
 //
 //  Created by Vishal Dharmawat on 14/04/13.
 //  Copyright (c) 2013 Vishal Dharmawat. All rights reserved.
 //
 
-#import "CustomCalcViewController.h"
-
+#import "OldOrnamentCalcViewController.h"
 
 static const CGFloat KEYBOARD_ANIMATION_DURATION = 0.3;
 static const CGFloat MINIMUM_SCROLL_FRACTION = 0.2;
@@ -16,12 +15,13 @@ static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
 static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 
-@interface CustomCalcViewController ()
+@interface OldOrnamentCalcViewController ()
 
 @end
 
-@implementation CustomCalcViewController
-@synthesize txtTotal,txtMakingCharge,txtRate,txtTax,txtWeight,makingChargeFactor;
+@implementation OldOrnamentCalcViewController
+
+@synthesize txtWeight,txtTotal,txtRate,txtPurity;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,16 +35,16 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
     self.navigationController.navigationBar.hidden = NO;
-    self.navigationItem.title = @"New Calculator";
+    self.navigationItem.title = @"Old Calculator";
     txtTotal.frame = CGRectMake(txtTotal.frame.origin.x, txtTotal.frame.origin.y, txtTotal.frame.size.width, 80);
     txtTotal.text = @"Rs. 0.00";
     txtTotal.textAlignment = NSTextAlignmentRight;
     txtTotal.font = [UIFont systemFontOfSize:60.0];
-    txtRate.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"rate"];
-    txtMakingCharge.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"makingCharge"];
-    txtTax.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"tax"];
-    // Do any additional setup after loading the view from its nib.
+    txtRate.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"oldRate"];
+    txtPurity.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"purity"];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,14 +54,12 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 }
 
 - (void)viewDidUnload {
+    [self setTxtTotal:nil];
     [self setTxtRate:nil];
     [self setTxtWeight:nil];
-    [self setTxtMakingCharge:nil];
-    [self setTxtTax:nil];
-    [self setMakingChargeFactor:nil];
+    [self setTxtPurity:nil];
     [super viewDidUnload];
 }
-
 
 - (void)textFieldDidBeginEditing: (UITextField *) textField
 {
@@ -138,28 +136,21 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     }
 }
 
-- (IBAction)calculateCost:(id)sender {
+
+- (IBAction)clearAllFields:(id)sender {
+    txtTotal.text = @"Rs. 0.00";
+    txtWeight.text = @"0.00";
+}
+
+- (IBAction)calculate:(id)sender {
     float total = 0.0f;
-    float totalWithTax = 0.0f;
-    if (makingChargeFactor.selectedSegmentIndex == 0) {
-        total = ([txtRate.text floatValue]*[txtWeight.text floatValue])+([txtRate.text floatValue]*[txtWeight.text floatValue])*[txtMakingCharge.text floatValue]/100;
-    }
-    else {
-        total = ([txtRate.text floatValue]+[txtMakingCharge.text floatValue])*[txtWeight.text floatValue];
-    }
-    totalWithTax = total + total*[txtTax.text floatValue]/100;
-    txtTotal.text = [NSString stringWithFormat:@"Rs. %0.2f",totalWithTax];
+    total = [txtRate.text floatValue]*([txtWeight.text floatValue]*[txtPurity.text floatValue]/100);
+    txtTotal.text = [NSString stringWithFormat:@"Rs. %0.2f",total];
 }
 
 - (IBAction)refreshUserDefaults:(id)sender {
-    [[NSUserDefaults standardUserDefaults]setObject:txtRate.text forKey:@"rate"];
-    [[NSUserDefaults standardUserDefaults]setObject:txtMakingCharge.text forKey:@"makingCharge"];
-    [[NSUserDefaults standardUserDefaults]setObject:txtTax.text forKey:@"tax"];
+    [[NSUserDefaults standardUserDefaults]setObject:txtRate.text forKey:@"OldRate"];
+    [[NSUserDefaults standardUserDefaults]setObject:txtPurity.text forKey:@"purity"];
     [[NSUserDefaults standardUserDefaults]synchronize];
-}
-
-- (IBAction)clearFields:(id)sender {
-    txtTotal.text = @"Rs. 0.00";
-    txtWeight.text = @"0.00";
 }
 @end

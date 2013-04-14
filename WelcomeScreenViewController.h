@@ -12,5 +12,6 @@
 
 - (IBAction)launchOrderBook:(id)sender;
 - (IBAction)launchCustomCalc:(id)sender;
+- (IBAction)launchOldOrnamentCalc:(id)sender;
 
 @end
