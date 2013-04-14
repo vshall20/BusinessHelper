@@ -7,17 +7,22 @@
 //
 
 #import "AppDelegate.h"
+#import "WelcomeScreenViewController.h"
 
 @implementation AppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+@synthesize navCtrl;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    WelcomeScreenViewController *WVC = [[WelcomeScreenViewController alloc]initWithNibName:@"WelcomeScreenViewController" bundle:nil];
+    navCtrl = [[UINavigationController alloc]initWithRootViewController:WVC];
+    [self.window setRootViewController:navCtrl];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
