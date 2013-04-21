@@ -42,7 +42,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     txtTotal.text = @"Rs. 0.00";
     txtTotal.textAlignment = NSTextAlignmentRight;
     txtTotal.font = [UIFont systemFontOfSize:60.0];
-    txtRate.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"oldRate"];
+    txtRate.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"OldRate"];
     txtPurity.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"purity"];
 
 }

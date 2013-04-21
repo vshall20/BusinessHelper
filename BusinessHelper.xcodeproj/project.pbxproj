@@ -11,6 +11,7 @@
 		869CA11F171B1F990008E21A /* CustomCalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F9E356171A8B33008F5AD1 /* CustomCalcViewController.m */; };
 		869CA120171B1F990008E21A /* WelcomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F9E351171A893B008F5AD1 /* WelcomeScreenViewController.m */; };
 		86AAADE31723D09500701AEF /* MainStoryboard-iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86AAADE21723D09500701AEF /* MainStoryboard-iPhone.storyboard */; };
+		86AAADE81723E4F500701AEF /* OrderForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AAADE71723E4F500701AEF /* OrderForm.m */; };
 		86F9E32F171A88A4008F5AD1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F9E32E171A88A4008F5AD1 /* UIKit.framework */; };
 		86F9E331171A88A4008F5AD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F9E330171A88A4008F5AD1 /* Foundation.framework */; };
 		86F9E333171A88A4008F5AD1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F9E332171A88A4008F5AD1 /* CoreGraphics.framework */; };
@@ -28,6 +29,8 @@
 		861FF24A171B25DD009EF3EF /* OldOrnamentCalcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OldOrnamentCalcViewController.h; sourceTree = "<group>"; };
 		861FF24B171B25DD009EF3EF /* OldOrnamentCalcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OldOrnamentCalcViewController.m; sourceTree = "<group>"; };
 		86AAADE21723D09500701AEF /* MainStoryboard-iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "MainStoryboard-iPhone.storyboard"; sourceTree = "<group>"; };
+		86AAADE61723E4F500701AEF /* OrderForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderForm.h; sourceTree = "<group>"; };
+		86AAADE71723E4F500701AEF /* OrderForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderForm.m; sourceTree = "<group>"; };
 		86F9E32B171A88A4008F5AD1 /* BusinessHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusinessHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86F9E32E171A88A4008F5AD1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		86F9E330171A88A4008F5AD1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -67,6 +70,8 @@
 		86F9E322171A88A4008F5AD1 = {
 			isa = PBXGroup;
 			children = (
+				86AAADE61723E4F500701AEF /* OrderForm.h */,
+				86AAADE71723E4F500701AEF /* OrderForm.m */,
 				86AAADE21723D09500701AEF /* MainStoryboard-iPhone.storyboard */,
 				861FF24A171B25DD009EF3EF /* OldOrnamentCalcViewController.h */,
 				861FF24B171B25DD009EF3EF /* OldOrnamentCalcViewController.m */,
@@ -196,6 +201,7 @@
 				86F9E341171A88A4008F5AD1 /* AppDelegate.m in Sources */,
 				86F9E34A171A88A4008F5AD1 /* BusinessHelper.xcdatamodeld in Sources */,
 				861FF24D171B25DD009EF3EF /* OldOrnamentCalcViewController.m in Sources */,
+				86AAADE81723E4F500701AEF /* OrderForm.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
