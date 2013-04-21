@@ -20,8 +20,8 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    WelcomeScreenViewController *WVC = [[WelcomeScreenViewController alloc]initWithNibName:@"WelcomeScreenViewController" bundle:nil];
-    navCtrl = [[UINavigationController alloc]initWithRootViewController:WVC];
+//    WelcomeScreenViewController *WVC = [[UIStoryboard storyboardWithName:@"MainStoryboard-iPhone" bundle:nil]instantiateInitialViewController];
+    navCtrl = [[UIStoryboard storyboardWithName:@"MainStoryboard-iPhone" bundle:nil]instantiateInitialViewController];
     [self.window setRootViewController:navCtrl];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

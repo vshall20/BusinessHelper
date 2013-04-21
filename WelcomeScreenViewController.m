@@ -42,13 +42,4 @@
     
 }
 
-- (IBAction)launchCustomCalc:(id)sender {
-    CustomCalcViewController *customCalcVC = [[CustomCalcViewController alloc]initWithNibName:@"CustomCalcViewController" bundle:nil];
-    [self.navigationController pushViewController:customCalcVC animated:YES];
-}
-
-- (IBAction)launchOldOrnamentCalc:(id)sender {
-    OldOrnamentCalcViewController *oldCalcVC = [[OldOrnamentCalcViewController alloc]initWithNibName:@"OldOrnamentCalcViewController" bundle:nil];
-    [self.navigationController pushViewController:oldCalcVC animated:YES];
-}
 @end

@@ -128,6 +128,10 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    [self dismissKeyboard];
+}
+
+-(void)dismissKeyboard {
     NSArray *viewArray = [self.view subviews];
     for (UITextField *textfield in viewArray) {
         if ([textfield isKindOfClass:[UITextField class]]) {
@@ -136,13 +140,13 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     }
 }
 
-
 - (IBAction)clearAllFields:(id)sender {
     txtTotal.text = @"Rs. 0.00";
     txtWeight.text = @"0.00";
 }
 
 - (IBAction)calculate:(id)sender {
+    [self dismissKeyboard];
     float total = 0.0f;
     total = [txtRate.text floatValue]*([txtWeight.text floatValue]*[txtPurity.text floatValue]/100);
     txtTotal.text = [NSString stringWithFormat:@"Rs. %0.2f",total];
