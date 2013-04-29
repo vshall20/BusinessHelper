@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="OrderDetail" representedClassName="OrderDetail" syncable="YES">
+        <attribute name="orderDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orderImage" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="order" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="OrderList" inverseName="detail" inverseEntity="OrderList" syncable="YES"/>
+    </entity>
+    <entity name="OrderList" representedClassName="OrderList" syncable="YES">
+        <attribute name="orderDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="orderName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orderStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="detail" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="OrderDetail" inverseName="order" inverseEntity="OrderDetail" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="OrderList" positionX="-297" positionY="-126" width="128" height="103"/>
+        <element name="OrderDetail" positionX="-36" positionY="-99" width="128" height="88"/>
+    </elements>
+</model>

@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		860B8E4B172ECAA1008C95DB /* AddNewOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 860B8E4A172ECAA1008C95DB /* AddNewOrderViewController.m */; };
+		860B8E4E172EE010008C95DB /* NewOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 860B8E4D172EE010008C95DB /* NewOrderCell.m */; };
 		861FF24D171B25DD009EF3EF /* OldOrnamentCalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 861FF24B171B25DD009EF3EF /* OldOrnamentCalcViewController.m */; };
 		869CA11F171B1F990008E21A /* CustomCalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F9E356171A8B33008F5AD1 /* CustomCalcViewController.m */; };
 		869CA120171B1F990008E21A /* WelcomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F9E351171A893B008F5AD1 /* WelcomeScreenViewController.m */; };
+		86A74F00172BB35300304F2C /* BusinessHelperModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 86A74EFE172BB35300304F2C /* BusinessHelperModel.xcdatamodeld */; };
+		86A74F03172BB3F800304F2C /* OrderList.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A74F02172BB3F800304F2C /* OrderList.m */; };
+		86A74F06172BB3F900304F2C /* OrderDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A74F05172BB3F900304F2C /* OrderDetail.m */; };
+		86A74F09172BBA9500304F2C /* OrderListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A74F08172BBA9400304F2C /* OrderListTableViewController.m */; };
+		86A74F0C172BBAD400304F2C /* OrderListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 86A74F0B172BBAD400304F2C /* OrderListCell.m */; };
 		86AAADE31723D09500701AEF /* MainStoryboard-iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86AAADE21723D09500701AEF /* MainStoryboard-iPhone.storyboard */; };
-		86AAADE81723E4F500701AEF /* OrderForm.m in Sources */ = {isa = PBXBuildFile; fileRef = 86AAADE71723E4F500701AEF /* OrderForm.m */; };
 		86F9E32F171A88A4008F5AD1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F9E32E171A88A4008F5AD1 /* UIKit.framework */; };
 		86F9E331171A88A4008F5AD1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F9E330171A88A4008F5AD1 /* Foundation.framework */; };
 		86F9E333171A88A4008F5AD1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86F9E332171A88A4008F5AD1 /* CoreGraphics.framework */; };
@@ -22,15 +28,25 @@
 		86F9E343171A88A4008F5AD1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 86F9E342171A88A4008F5AD1 /* Default.png */; };
 		86F9E345171A88A4008F5AD1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86F9E344171A88A4008F5AD1 /* Default@2x.png */; };
 		86F9E347171A88A4008F5AD1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 86F9E346171A88A4008F5AD1 /* Default-568h@2x.png */; };
-		86F9E34A171A88A4008F5AD1 /* BusinessHelper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 86F9E348171A88A4008F5AD1 /* BusinessHelper.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		860B8E49172ECAA1008C95DB /* AddNewOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewOrderViewController.h; sourceTree = "<group>"; };
+		860B8E4A172ECAA1008C95DB /* AddNewOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewOrderViewController.m; sourceTree = "<group>"; };
+		860B8E4C172EE010008C95DB /* NewOrderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewOrderCell.h; sourceTree = "<group>"; };
+		860B8E4D172EE010008C95DB /* NewOrderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewOrderCell.m; sourceTree = "<group>"; };
 		861FF24A171B25DD009EF3EF /* OldOrnamentCalcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OldOrnamentCalcViewController.h; sourceTree = "<group>"; };
 		861FF24B171B25DD009EF3EF /* OldOrnamentCalcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OldOrnamentCalcViewController.m; sourceTree = "<group>"; };
+		86A74EFF172BB35300304F2C /* BusinessHelperModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BusinessHelperModel.xcdatamodel; sourceTree = "<group>"; };
+		86A74F01172BB3F800304F2C /* OrderList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderList.h; sourceTree = "<group>"; };
+		86A74F02172BB3F800304F2C /* OrderList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderList.m; sourceTree = "<group>"; };
+		86A74F04172BB3F900304F2C /* OrderDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderDetail.h; sourceTree = "<group>"; };
+		86A74F05172BB3F900304F2C /* OrderDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderDetail.m; sourceTree = "<group>"; };
+		86A74F07172BBA9400304F2C /* OrderListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderListTableViewController.h; sourceTree = "<group>"; };
+		86A74F08172BBA9400304F2C /* OrderListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderListTableViewController.m; sourceTree = "<group>"; };
+		86A74F0A172BBAD400304F2C /* OrderListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderListCell.h; sourceTree = "<group>"; };
+		86A74F0B172BBAD400304F2C /* OrderListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderListCell.m; sourceTree = "<group>"; };
 		86AAADE21723D09500701AEF /* MainStoryboard-iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "MainStoryboard-iPhone.storyboard"; sourceTree = "<group>"; };
-		86AAADE61723E4F500701AEF /* OrderForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderForm.h; sourceTree = "<group>"; };
-		86AAADE71723E4F500701AEF /* OrderForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderForm.m; sourceTree = "<group>"; };
 		86F9E32B171A88A4008F5AD1 /* BusinessHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BusinessHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86F9E32E171A88A4008F5AD1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		86F9E330171A88A4008F5AD1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -45,7 +61,6 @@
 		86F9E342171A88A4008F5AD1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		86F9E344171A88A4008F5AD1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		86F9E346171A88A4008F5AD1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		86F9E349171A88A4008F5AD1 /* BusinessHelper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BusinessHelper.xcdatamodel; sourceTree = "<group>"; };
 		86F9E350171A893B008F5AD1 /* WelcomeScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeScreenViewController.h; sourceTree = "<group>"; };
 		86F9E351171A893B008F5AD1 /* WelcomeScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeScreenViewController.m; sourceTree = "<group>"; };
 		86F9E355171A8B33008F5AD1 /* CustomCalcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCalcViewController.h; sourceTree = "<group>"; };
@@ -70,8 +85,18 @@
 		86F9E322171A88A4008F5AD1 = {
 			isa = PBXGroup;
 			children = (
-				86AAADE61723E4F500701AEF /* OrderForm.h */,
-				86AAADE71723E4F500701AEF /* OrderForm.m */,
+				860B8E4C172EE010008C95DB /* NewOrderCell.h */,
+				860B8E4D172EE010008C95DB /* NewOrderCell.m */,
+				860B8E49172ECAA1008C95DB /* AddNewOrderViewController.h */,
+				860B8E4A172ECAA1008C95DB /* AddNewOrderViewController.m */,
+				86A74F0A172BBAD400304F2C /* OrderListCell.h */,
+				86A74F0B172BBAD400304F2C /* OrderListCell.m */,
+				86A74F07172BBA9400304F2C /* OrderListTableViewController.h */,
+				86A74F08172BBA9400304F2C /* OrderListTableViewController.m */,
+				86A74F04172BB3F900304F2C /* OrderDetail.h */,
+				86A74F05172BB3F900304F2C /* OrderDetail.m */,
+				86A74F01172BB3F800304F2C /* OrderList.h */,
+				86A74F02172BB3F800304F2C /* OrderList.m */,
 				86AAADE21723D09500701AEF /* MainStoryboard-iPhone.storyboard */,
 				861FF24A171B25DD009EF3EF /* OldOrnamentCalcViewController.h */,
 				861FF24B171B25DD009EF3EF /* OldOrnamentCalcViewController.m */,
@@ -79,6 +104,7 @@
 				86F9E356171A8B33008F5AD1 /* CustomCalcViewController.m */,
 				86F9E350171A893B008F5AD1 /* WelcomeScreenViewController.h */,
 				86F9E351171A893B008F5AD1 /* WelcomeScreenViewController.m */,
+				86A74EFE172BB35300304F2C /* BusinessHelperModel.xcdatamodeld */,
 				86F9E336171A88A4008F5AD1 /* BusinessHelper */,
 				86F9E32D171A88A4008F5AD1 /* Frameworks */,
 				86F9E32C171A88A4008F5AD1 /* Products */,
@@ -109,7 +135,6 @@
 			children = (
 				86F9E33F171A88A4008F5AD1 /* AppDelegate.h */,
 				86F9E340171A88A4008F5AD1 /* AppDelegate.m */,
-				86F9E348171A88A4008F5AD1 /* BusinessHelper.xcdatamodeld */,
 				86F9E337171A88A4008F5AD1 /* Supporting Files */,
 			);
 			path = BusinessHelper;
@@ -199,9 +224,14 @@
 				869CA120171B1F990008E21A /* WelcomeScreenViewController.m in Sources */,
 				86F9E33D171A88A4008F5AD1 /* main.m in Sources */,
 				86F9E341171A88A4008F5AD1 /* AppDelegate.m in Sources */,
-				86F9E34A171A88A4008F5AD1 /* BusinessHelper.xcdatamodeld in Sources */,
 				861FF24D171B25DD009EF3EF /* OldOrnamentCalcViewController.m in Sources */,
-				86AAADE81723E4F500701AEF /* OrderForm.m in Sources */,
+				86A74F00172BB35300304F2C /* BusinessHelperModel.xcdatamodeld in Sources */,
+				86A74F03172BB3F800304F2C /* OrderList.m in Sources */,
+				86A74F06172BB3F900304F2C /* OrderDetail.m in Sources */,
+				86A74F09172BBA9500304F2C /* OrderListTableViewController.m in Sources */,
+				86A74F0C172BBAD400304F2C /* OrderListCell.m in Sources */,
+				860B8E4B172ECAA1008C95DB /* AddNewOrderViewController.m in Sources */,
+				860B8E4E172EE010008C95DB /* NewOrderCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,13 +353,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		86F9E348171A88A4008F5AD1 /* BusinessHelper.xcdatamodeld */ = {
+		86A74EFE172BB35300304F2C /* BusinessHelperModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				86F9E349171A88A4008F5AD1 /* BusinessHelper.xcdatamodel */,
+				86A74EFF172BB35300304F2C /* BusinessHelperModel.xcdatamodel */,
 			);
-			currentVersion = 86F9E349171A88A4008F5AD1 /* BusinessHelper.xcdatamodel */;
-			path = BusinessHelper.xcdatamodeld;
+			currentVersion = 86A74EFF172BB35300304F2C /* BusinessHelperModel.xcdatamodel */;
+			path = BusinessHelperModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
