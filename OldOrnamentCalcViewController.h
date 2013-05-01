@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CartViewController.h"
 
-@interface OldOrnamentCalcViewController : UIViewController  <UITextFieldDelegate> {
+@interface OldOrnamentCalcViewController : UIViewController  <UITextFieldDelegate,NSCopying> {
     CGFloat animatedDistance;
 }
 
@@ -17,8 +18,11 @@
 @property (weak, nonatomic) IBOutlet UITextField *txtWeight;
 @property (weak, nonatomic) IBOutlet UITextField *txtPurity;
 
+
 - (IBAction)clearAllFields:(id)sender;
 - (IBAction)calculate:(id)sender;
 - (IBAction)refreshUserDefaults:(id)sender;
+- (IBAction)addToCart:(id)sender;
+//- (IBAction)viewCart:(id)sender;
 
 @end

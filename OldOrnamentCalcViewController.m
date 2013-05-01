@@ -23,6 +23,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 @synthesize txtWeight,txtTotal,txtRate,txtPurity;
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -157,4 +158,14 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
     [[NSUserDefaults standardUserDefaults]setObject:txtPurity.text forKey:@"purity"];
     [[NSUserDefaults standardUserDefaults]synchronize];
 }
+
+- (IBAction)addToCart:(id)sender {
+    Cart *cart = [Cart instanse];
+    [cart.ornaments addObject:self];
+}
+
+//- (IBAction)viewCart:(id)sender {
+//    CartViewController *cart = [CartViewController instanse];
+//    [self.navigationController pushViewController:cart animated:YES];
+//}
 @end
