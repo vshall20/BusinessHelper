@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CartViewController.h"
 
-@interface OldOrnamentCalcViewController : UIViewController  <UITextFieldDelegate,NSCopying> {
+@interface OldOrnamentCalcViewController : UIViewController  <UITextFieldDelegate> {
     CGFloat animatedDistance;
 }
 

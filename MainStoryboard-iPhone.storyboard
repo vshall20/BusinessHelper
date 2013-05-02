@@ -370,6 +370,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addToCart:" destination="D4g-zT-1fu" eventType="touchUpInside" id="PRv-ol-7o4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="k9e-oK-eB1">
                                 <rect key="frame" x="160" y="365" width="140" height="44"/>
@@ -382,6 +385,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="n3Q-93-vF9" kind="push" id="L5a-CR-Ubm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -592,6 +598,7 @@
         <class className="CustomCalcViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CustomCalcViewController.h"/>
             <relationships>
+                <relationship kind="action" name="addToCart:"/>
                 <relationship kind="action" name="calculateCost:"/>
                 <relationship kind="action" name="clearFields:"/>
                 <relationship kind="action" name="refreshUserDefaults:"/>
@@ -646,4 +653,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="L5a-CR-Ubm"/>
+    </inferredMetricsTieBreakers>
 </document>

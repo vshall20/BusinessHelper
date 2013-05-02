@@ -16,7 +16,9 @@ static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
 static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 
-@interface CustomCalcViewController ()
+@interface CustomCalcViewController (){
+    float totalWithTax;
+}
 
 @end
 
@@ -145,7 +147,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 {
     [self dismissKeyboard];
     float total = 0.0f;
-    float totalWithTax = 0.0f;
+    totalWithTax = 0.0f;
     if (makingChargeFactor.selectedSegmentIndex == 0) {
         total = ([txtRate.text floatValue]*[txtWeight.text floatValue])+([txtRate.text floatValue]*[txtWeight.text floatValue])*[txtMakingCharge.text floatValue]/100;
     }
@@ -166,5 +168,11 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 - (IBAction)clearFields:(id)sender {
     txtTotal.text = @"Rs. 0.00";
     txtWeight.text = @"0.00";
+}
+
+- (IBAction)addToCart:(id)sender {
+    Cart *cart = [Cart instanse];
+    NSDictionary *ornaments = [[NSDictionary alloc]initWithObjectsAndKeys:txtRate.text,@"newGoldRate",txtWeight.text,@"newGoldWeight",txtMakingCharge.text,@"newGoldMakingChagre",[[NSNumber numberWithFloat: totalWithTax] stringValue],@"newGoldTotal",txtTax.text,@"newGoldTax", nil];
+    [cart.ornaments addObject:ornaments];
 }
 @end

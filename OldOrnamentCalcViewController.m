@@ -15,7 +15,9 @@ static const CGFloat PORTRAIT_KEYBOARD_HEIGHT = 216;
 static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 
-@interface OldOrnamentCalcViewController ()
+@interface OldOrnamentCalcViewController (){
+    float total;
+}
 
 @end
 
@@ -148,7 +150,7 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 - (IBAction)calculate:(id)sender {
     [self dismissKeyboard];
-    float total = 0.0f;
+    total = 0.0f;
     total = [txtRate.text floatValue]*([txtWeight.text floatValue]*[txtPurity.text floatValue]/100);
     txtTotal.text = [NSString stringWithFormat:@"Rs. %0.2f",total];
 }
@@ -161,7 +163,8 @@ static const CGFloat LANDSCAPE_KEYBOARD_HEIGHT = 162;
 
 - (IBAction)addToCart:(id)sender {
     Cart *cart = [Cart instanse];
-    [cart.ornaments addObject:self];
+    NSDictionary *ornaments = [[NSDictionary alloc]initWithObjectsAndKeys:txtRate.text,@"oldGoldRate",txtWeight.text,@"oldGoldWeight",txtPurity.text,@"oldGoldPurity",[[NSNumber numberWithFloat: total]stringValue ],@"oldGoldTotal", nil];
+    [cart.ornaments addObject:ornaments];
 }
 
 //- (IBAction)viewCart:(id)sender {

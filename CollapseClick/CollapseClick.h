@@ -18,6 +18,7 @@
 @required
 -(int)numberOfCellsForCollapseClick;
 -(NSString *)titleForCollapseClickAtIndex:(int)index;
+-(NSString *)subTitleForCollapseClickAtIndex:(int)index;
 -(UIView *)viewForCollapseClickContentViewAtIndex:(int)index;
 
 @optional

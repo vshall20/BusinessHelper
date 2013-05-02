@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Cart.h"
 
 @interface CustomCalcViewController : UIViewController <UITextFieldDelegate> {
     CGFloat animatedDistance;
@@ -22,5 +23,6 @@
 - (IBAction)calculateCost:(id)sender;
 - (IBAction)refreshUserDefaults:(id)sender;
 - (IBAction)clearFields:(id)sender;
+- (IBAction)addToCart:(id)sender;
 
 @end

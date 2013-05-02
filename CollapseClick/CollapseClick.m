@@ -51,7 +51,8 @@
     for (int xx = 0; xx < [CollapseClickDelegate numberOfCellsForCollapseClick]; xx++) {
         // Create Cell
         CollapseClickCell *cell = [CollapseClickCell newCollapseClickCellWithTitle:[CollapseClickDelegate titleForCollapseClickAtIndex:xx] index:xx content:[CollapseClickDelegate viewForCollapseClickContentViewAtIndex:xx]];
-        
+        cell.SubTitleLabel.text = [CollapseClickDelegate subTitleForCollapseClickAtIndex:xx];
+        cell.SubTitleLabel.textAlignment = NSTextAlignmentRight;
         
         // Set cell.TitleView's backgroundColor
         if ([(id)CollapseClickDelegate respondsToSelector:@selector(colorForCollapseClickTitleViewAtIndex:)]) {

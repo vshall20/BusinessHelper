@@ -44,19 +44,43 @@
 
 -(int)numberOfCellsForCollapseClick {
     cart = [Cart instanse];
-    return cart.ornaments.count;
+    return cart.ornaments.count+1;
     
 }
 -(NSString *)titleForCollapseClickAtIndex:(int)index {
-    id temp = [cart.ornaments objectAtIndex:index];
-    if ([temp isKindOfClass:[OldOrnamentCalcViewController class]]) {
-        return [NSString stringWithFormat:@"%@ gms",[[(OldOrnamentCalcViewController *)temp txtWeight]text] ];
+    if (index == cart.ornaments.count) {
+        return @"Total";
+    }
+    NSDictionary *temp = [cart.ornaments objectAtIndex:index];
+    if ([temp valueForKey:@"oldGoldWeight"]) {
+        return [NSString stringWithFormat:@"%@ gms",[temp valueForKey:@"oldGoldWeight"]];
     }
     else {
-        return [NSString stringWithFormat:@"%@ gms",[[(CustomCalcViewController *)temp txtWeight]text]];
+        return [NSString stringWithFormat:@"%@ gms",[temp valueForKey:@"newGoldWeight"]];
     }
     
 }
+
+-(NSString *)subTitleForCollapseClickAtIndex:(int)index {
+    
+    if (index == cart.ornaments.count) {
+        float total = 0;
+        for (int i=0; i<cart.ornaments.count; i++) {
+            NSDictionary *temp = [cart.ornaments objectAtIndex:i];
+            total += [[temp valueForKey:@"newGoldTotal"] floatValue];
+            total -= [[temp valueForKey:@"oldGoldTotal"] floatValue];
+        }
+        return [NSString stringWithFormat:@"Rs. %0.2f",total];
+    }
+    NSDictionary *temp = [cart.ornaments objectAtIndex:index];
+    if ([temp valueForKey:@"oldGoldTotal"]) {
+        return [NSString stringWithFormat:@"Rs. %@",[temp valueForKey:@"oldGoldTotal"]];
+    }
+    else {
+        return [NSString stringWithFormat:@"Rs. %@",[temp valueForKey:@"newGoldTotal"]];
+    }
+}
+
 -(UIView *)viewForCollapseClickContentViewAtIndex:(int)index {
     switch (index) {
         case 0:
