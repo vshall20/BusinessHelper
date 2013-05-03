@@ -16,6 +16,7 @@
 		86110CCA173103AA006F965F /* CartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86110CC9173103AA006F965F /* CartViewController.m */; };
 		86110CCD173128D5006F965F /* Cart.m in Sources */ = {isa = PBXBuildFile; fileRef = 86110CCC173128D5006F965F /* Cart.m */; };
 		861FF24D171B25DD009EF3EF /* OldOrnamentCalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 861FF24B171B25DD009EF3EF /* OldOrnamentCalcViewController.m */; };
+		863389D31734282200CC189E /* NewGoldDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 863389D21734282200CC189E /* NewGoldDetailViewController.m */; };
 		869CA11F171B1F990008E21A /* CustomCalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F9E356171A8B33008F5AD1 /* CustomCalcViewController.m */; };
 		869CA120171B1F990008E21A /* WelcomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86F9E351171A893B008F5AD1 /* WelcomeScreenViewController.m */; };
 		86A74F00172BB35300304F2C /* BusinessHelperModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 86A74EFE172BB35300304F2C /* BusinessHelperModel.xcdatamodeld */; };
@@ -54,6 +55,8 @@
 		86110CCC173128D5006F965F /* Cart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cart.m; sourceTree = "<group>"; };
 		861FF24A171B25DD009EF3EF /* OldOrnamentCalcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OldOrnamentCalcViewController.h; sourceTree = "<group>"; };
 		861FF24B171B25DD009EF3EF /* OldOrnamentCalcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OldOrnamentCalcViewController.m; sourceTree = "<group>"; };
+		863389D11734282200CC189E /* NewGoldDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewGoldDetailViewController.h; sourceTree = "<group>"; };
+		863389D21734282200CC189E /* NewGoldDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewGoldDetailViewController.m; sourceTree = "<group>"; };
 		86A74EFF172BB35300304F2C /* BusinessHelperModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BusinessHelperModel.xcdatamodel; sourceTree = "<group>"; };
 		86A74F01172BB3F800304F2C /* OrderList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderList.h; sourceTree = "<group>"; };
 		86A74F02172BB3F800304F2C /* OrderList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderList.m; sourceTree = "<group>"; };
@@ -116,6 +119,8 @@
 		86F9E322171A88A4008F5AD1 = {
 			isa = PBXGroup;
 			children = (
+				863389D11734282200CC189E /* NewGoldDetailViewController.h */,
+				863389D21734282200CC189E /* NewGoldDetailViewController.m */,
 				86110CCB173128D5006F965F /* Cart.h */,
 				86110CCC173128D5006F965F /* Cart.m */,
 				86110CC8173103AA006F965F /* CartViewController.h */,
@@ -274,6 +279,7 @@
 				86110CC61730FC72006F965F /* CollapseClickCell.m in Sources */,
 				86110CCA173103AA006F965F /* CartViewController.m in Sources */,
 				86110CCD173128D5006F965F /* Cart.m in Sources */,
+				863389D31734282200CC189E /* NewGoldDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

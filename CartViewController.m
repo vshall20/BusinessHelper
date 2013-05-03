@@ -13,6 +13,7 @@
 @end
 
 @implementation CartViewController
+@synthesize nGoldDetailVC;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -82,35 +83,56 @@
 }
 
 -(UIView *)viewForCollapseClickContentViewAtIndex:(int)index {
-    switch (index) {
-        case 0:
-        {
-            UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
-            view.backgroundColor = [UIColor redColor];
-            return view;
-            break;
-        }
-        case 1:
-        {
-            UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
-            view.backgroundColor = [UIColor redColor];
-            return view;
-            break;
-        }
-        case 2:
-        {
-            UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
-            view.backgroundColor = [UIColor redColor];
-            return view;
-            break;
-        }
-        default:
-        {
-            UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
-            view.backgroundColor = [UIColor redColor];
-            return view;
-            break;
-        }
+//    switch (index) {
+//        case 0:
+//        {
+//            UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
+//            view.backgroundColor = [UIColor redColor];
+//            return view;
+//            break;
+//        }
+//        case 1:
+//        {
+//            UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
+//            view.backgroundColor = [UIColor redColor];
+//            return view;
+//            break;
+//        }
+//        case 2:
+//        {
+//            UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
+//            view.backgroundColor = [UIColor redColor];
+//            return view;
+//            break;
+//        }
+//        default:
+//        {
+//            UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
+//            view.backgroundColor = [UIColor redColor];
+//            return view;
+//            break;
+//        }
+//    }
+    if (index == cart.ornaments.count) {
+        return nil;
+    }
+    NSDictionary *temp = [cart.ornaments objectAtIndex:index];
+    if ([temp valueForKey:@"oldGoldWeight"] != nil) {
+        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
+        view.backgroundColor = [UIColor redColor];
+        return view;
+
+    }
+    else
+    {
+        nGoldDetailVC = [[NewGoldDetailViewController alloc]init];
+        nGoldDetailVC = [self.storyboard instantiateViewControllerWithIdentifier:@"NewGoldDetailViewController"];
+        nGoldDetailVC.lblRate.text = [NSString stringWithFormat:@"Rs. %@",[temp valueForKey:@"newGoldRate"]];
+        nGoldDetailVC.lblWeight.text = [NSString stringWithFormat:@"%@ gms",[temp valueForKey:@"newGoldWeight"]];
+        nGoldDetailVC.lblMakingCharge.text = [NSString stringWithFormat:@"%@",[temp valueForKey:@"newGoldMakingCharge"]];
+        nGoldDetailVC.lblTax.text = [NSString stringWithFormat:@"%@ percent",[temp valueForKey:@"newGoldTax"]];
+        nGoldDetailVC.lblTotal.text = [NSString stringWithFormat:@"Rs. %@",[temp valueForKey:@"newGoldTotal"]];
+        return nGoldDetailVC.view;
     }
 }
 @end

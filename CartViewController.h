@@ -11,6 +11,7 @@
 #import "Cart.h"
 #import "OldOrnamentCalcViewController.h"
 #import "CustomCalcViewController.h"
+#import "NewGoldDetailViewController.h"
 
 @interface CartViewController : UIViewController <CollapseClickDelegate>{
 
@@ -18,5 +19,7 @@
     Cart *cart;
 
 }
+@property (nonatomic, strong)NewGoldDetailViewController *nGoldDetailVC;
+
 
 @end
